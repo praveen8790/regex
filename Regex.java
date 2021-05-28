@@ -16,7 +16,9 @@ public class Regex {
         return "^[A-Z][a-z]{3,}$";
     }
 
-    
+    public String email(){
+        return "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9-](?:[a-z-]*[a-z])?\\.)+[a-z]{3,}(?:[a-z-]*[a-z]{3,})?";
+    }
     public static void main(String[] args) {
         Regex regex = new Regex();
         Scanner scanner = new Scanner(System.in);
@@ -25,6 +27,9 @@ public class Regex {
         regex.regexCompiler(regex.firstName(),firstname);
         String lastname = scanner.next();
         regex.regexCompiler(regex.lastName(),lastname);
+        String email = scanner.next();
+        regex.regexCompiler(regex.email(),email);
+
 
 
 
