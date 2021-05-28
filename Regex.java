@@ -1,5 +1,27 @@
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Regex {
+    public boolean regexCompiler(String regexp, String expr){
+        Pattern compile = Pattern.compile(regexp);
+        Matcher matcher = compile.matcher(expr);
+        boolean matches = matcher.matches();
+        return matches;
+    }
+    public String firstName(){
+        return "^[A-Z][a-z]{3,}$";
+    }
+
+    
     public static void main(String[] args) {
-        System.out.println("welcome to regex");
+        Regex regex = new Regex();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("enter first name");
+        String firstname = scanner.next();
+        regex.regexCompiler(regex.firstName(),firstname);
+
+
+
     }
 }
