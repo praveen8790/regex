@@ -23,7 +23,7 @@ public class Regex {
         return "^(?:(?:\\+|0{0,2})91(\\s*|[\\-])?|[0]?)?([6789]\\d{2}([ -]?)\\d{3}([ -]?)\\d{4})$";
     }
     public String password(){
-        return "(?=.*[A-Z]).{8,}$";
+        return "(?=.*[0-9])(?=.*[A-Z]).{8,}$";
     }
     public static void main(String[] args) {
         Regex regex = new Regex();
