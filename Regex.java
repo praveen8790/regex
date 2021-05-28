@@ -12,6 +12,9 @@ public class Regex {
     public String firstName(){
         return "^[A-Z][a-z]{3,}$";
     }
+    public String lastName(){
+        return "^[A-Z][a-z]{3,}$";
+    }
 
     
     public static void main(String[] args) {
@@ -20,6 +23,9 @@ public class Regex {
         System.out.println("enter first name");
         String firstname = scanner.next();
         regex.regexCompiler(regex.firstName(),firstname);
+        String lastname = scanner.next();
+        regex.regexCompiler(regex.lastName(),lastname);
+
 
 
 
