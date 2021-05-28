@@ -22,6 +22,9 @@ public class Regex {
     public String mobileNumber(){
         return "^(?:(?:\\+|0{0,2})91(\\s*|[\\-])?|[0]?)?([6789]\\d{2}([ -]?)\\d{3}([ -]?)\\d{4})$";
     }
+    public String password(){
+        return "[a-zA-Z0-9]{8,}";
+    }
     public static void main(String[] args) {
         Regex regex = new Regex();
         Scanner scanner = new Scanner(System.in);
@@ -34,6 +37,8 @@ public class Regex {
         regex.regexCompiler(regex.email(),email);
         String mobilenumber = scanner.next();
         regex.regexCompiler(regex.mobileNumber(),mobilenumber);
+        String password = scanner.next();
+        regex.regexCompiler(regex.password(), password);
 
 
 
